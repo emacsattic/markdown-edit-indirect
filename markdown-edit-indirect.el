@@ -44,7 +44,7 @@
 (require 'markdown-mode)
 
 (defvar markdown-edit-indirect-lang-alist
-  '(("Python"           . python-mode)
+  '(("Shell"            . sh-mode)
     ("JavaScript"       . js-mode)
     ("reStructuredText" . rst-mode))
   "Alist for languages used to edit a code block.
