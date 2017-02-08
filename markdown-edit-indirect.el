@@ -43,13 +43,20 @@
 (require 'edit-indirect)
 (require 'markdown-mode)
 
-(defvar markdown-edit-indirect-lang-alist
+(defgroup markdown-edit-indirect nil
+  "Edit markdown code blocks in a separate buffer."
+  :prefix "markdown-edit-indirect-"
+  :group 'markdown)
+
+(defcustom markdown-edit-indirect-lang-alist
   '(("Shell"            . sh-mode)
     ("JavaScript"       . js-mode)
     ("reStructuredText" . rst-mode))
   "Alist for languages used to edit a code block.
 
-The key part of this alist is case insensitive.")
+The key part of this alist is case insensitive."
+  :type '(alist :key-type string :value-type symbol)
+  :group 'markdown-edit-indirect)
 
 (defun markdown-edit-indirect-guess-mode (lang)
   "Guess a major mode for LANG."
