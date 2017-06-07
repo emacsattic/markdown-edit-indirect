@@ -6,7 +6,7 @@
 ;; URL: https://github.com/emacs-pe/markdown-edit-indirect.el
 ;; Keywords: convenience
 ;; Version: 0.1
-;; Package-Requires: ((emacs "24.3") (markdown-mode "2.1") (edit-indirect "0.1.4"))
+;; Package-Requires: ((emacs "24.3") (markdown-mode "2.2") (edit-indirect "0.1.4"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -89,7 +89,7 @@ The key part of this alist is case insensitive."
                          (match-string-no-properties 2))
                         (t
                          (beginning-of-line 0)
-                         (and (looking-at markdown-regex-gfm-code-block-open) (match-string-no-properties 2))))))
+                         (and (looking-at markdown-regex-gfm-code-block-open) (match-string-no-properties 3))))))
                (mode (or (cdr (assoc-string lang markdown-edit-indirect-lang-alist t))
                          (markdown-edit-indirect-guess-mode lang)
                          #'normal-mode))
