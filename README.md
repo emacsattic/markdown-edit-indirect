@@ -3,6 +3,9 @@
 *Author:* Mario Rodas <marsam@users.noreply.github.com><br>
 *Version:* 0.1<br>
 
+> **NOTE:** THIS PACKAGE IS DEPRECATED, as `markdown-mode` includes
+> `markdown-edit-code-block` since v2.3 which offers the same functionality.
+
 Edit markdown code block in a separate buffer like `org-edit-src-code`.
 
 ### Usage
